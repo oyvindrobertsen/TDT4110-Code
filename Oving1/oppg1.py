@@ -6,26 +6,15 @@
 ## Øyvind Robertsen
 ################################
 import math
-
 pi = 3.1415
 
-r = 3
-theta = pi/2
-x = format(r * math.cos(theta), '.5f')
-y = format(r * math.sin(theta), '.5f')
+def convert(r, theta):
+    x = format(r * math.cos(theta), '.5f')
+    y = format(r * math.sin(theta), '.5f')
+    theta = format(theta, '.2f')
+    print('The carthesian equivalent of (',r,',',theta,') is (',x,',',y,')!')
+    return
 
-print('The carthesian equivalent of ( 3 , pi/2 ) is (',x,',',y,')')
-
-r = 2.3
-theta = pi/3
-x = format(r * math.cos(theta), '.5f')
-y = format(r * math.sin(theta), '.5f')
-
-print('The carthesian equivalent of ( 2.3 , pi/3 ) is (',x,',',y,')')
-
-r = 5
-theta = 0
-x = format(r * math.cos(theta), '.5f')
-y = format(r * math.sin(theta), '.5f')
-
-print('The carthesian equivalent of ( 5 , 0 ) is (',x,',',y,')')
+convert(3, pi/2)
+convert(2.3, pi/3)
+convert(5, 0)
