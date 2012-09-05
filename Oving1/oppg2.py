@@ -1,5 +1,6 @@
 ################################
 ## Øving 1 - TDT4110
+## Oppgave 2
 ## The probability of getting
 ## two pair in Texas Hold'em
 ## Øyvind Robertsen
