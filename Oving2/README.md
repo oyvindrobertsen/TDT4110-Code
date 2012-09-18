@@ -8,8 +8,12 @@ b) ROM (Read Only Memory) brukes som regel til å holde firmware, software som e
 c) Ved bruk av Random Access kan alle "biter" med data hentes ut uten å måtte lese gjennom hvert enkelt bit med data som ligger før den aktuelle biten.
 
 d)1) stuff er en funksjon, x er et parameter som funksjonen tar.
-  2) 
+
+  2)
+
       ```python
       def stuff(x):
-        y
+        y = int(input('Skriv inn et tall:'))
+        z = x ** y
+        print(z)
       ```
