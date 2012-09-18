@@ -17,3 +17,10 @@ def stuff(x):
     z = x ** y
     print(z)
 ```
+
+Oppg 2
+========
+
+a) 1. (7 3) 2. (5 4) 3. (5 3) 4. (7 3)
+
+b) Muntlig
