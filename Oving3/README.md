@@ -10,4 +10,4 @@ c) En kompilator oversetter fra høynivåprogrammeringsspråk til et lavere niv�
 Oppg. 3
 ========
 
-c) Skriver vi add(10), er 10 et argument. Et argument er den konkrete verdien eller som blir "sendt" til funksjonen vi kaller. Et parameter er variabelen som mottar verdien av argumentet som blir sendt til funkjsonen når den kalles.
+c) Skriver vi ``add(10)```, er 10 et argument. Et argument er den konkrete verdien eller variabelen som blir "sendt" til funksjonen vi kaller. Et parameter er variabelen som mottar verdien av argumentet som blir sendt til funkjsonen når den kalles.
