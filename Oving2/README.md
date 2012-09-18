@@ -11,9 +11,9 @@ d)1) stuff er en funksjon, x er et parameter som funksjonen tar.
 
   2)
 
-      ```python
-      def stuff(x):
-        y = int(input('Skriv inn et tall:'))
-        z = x ** y
-        print(z)
-      ```
+```python
+def stuff(x):
+    y = int(input('Skriv inn et tall:'))
+    z = x ** y
+    print(z)
+```
