@@ -10,3 +10,7 @@ b) Lisp
 
 c) Data om data - Data som beskriver hvordan data organiseres
 
+Oppg. 2
+=========
+
+h) Nei, dataene blir ikke skrevet til harddisk, altså kan vi ikke hente dem på et senere tidspunkt.
