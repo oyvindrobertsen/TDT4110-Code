@@ -36,7 +36,7 @@ def facebookPrompt():
     if kjonn == 'm':
         prompt = input('Mellom 40-45% av Facebook sine brukere er menn. Er du en av disse (Ja/Nei)? ')
     else:
-        prompt = input('Mellom 55-60% av Facebook sine brukere er menn. Er du en av disse (Ja/Nei)? ')
+        prompt = input('Mellom 55-60% av Facebook sine brukere er kvinner. Er du en av disse (Ja/Nei)? ')
 
     if prompt == 'Ja' or prompt == 'ja' or prompt == 'Nei' or prompt == 'nei' or prompt == 'hade':
         return prompt
@@ -60,69 +60,77 @@ def timerSosMedierPrompt():
 
 def lokke():
     do = True
-    global aktiv_sosmedier
     global kjonn
-    global alder
+
+    antall_kvinner = 0
+    antall_menn = 0
+    antall_sosmedier = 0
+    antall_menn_facebook = 0
+    antall_kvinner_facebook = 0
+    antall_facebook = 0
+    antall_timer_sosmedier = 0
 
 
     while do == True:
         print('Husk at du kan avslutte undersøkelsen til enhver tid ved å skrive hade.')
 
-        kjonnVar = kjonnPrompt()
+        kjonn = kjonnPrompt()
 
-        if kjonnVar == 'hade':
+        if kjonn == 'hade':
+            break
+        elif kjonn == 'm':
+            antall_menn = antall_menn + 1
+        else:
+            antall_kvinner = antall_kvinner + 1
+
+
+        alder = alderPrompt()
+
+        if alder == 'hade':
             break
         else:
-            kjonn = kjonnVar
+            pass
 
-        alderVar = alderPrompt()
+        aktiv_sosmedier = aktivSosMedPrompt()
 
-        if alderVar == 'hade':
+        if aktiv_sosmedier == 'hade':
             break
-        else:
-            alder = alderVar
+        elif aktiv_sosmedier == 'Ja' or aktiv_sosmedier == 'ja':
+            antall_sosmedier = antall_sosmedier + 1
 
-        aktivSosMedVar = aktivSosMedPrompt()
-
-        if aktivSosMedVar == 'hade':
-            break
-        else:
-            aktiv_sosmedier = aktivSosMedVar
 
         if aktiv_sosmedier == 'Ja' or aktiv_sosmedier == 'ja':
-            facebookVar = facebookPrompt()
+            medlem_facebook = facebookPrompt()
 
-            if facebookVar == 'hade':
+            if medlem_facebook == 'hade':
+                break
+            elif (medlem_facebook == 'Ja' or medlem_facebook == 'ja') and kjonn == 'm':
+                antall_menn_facebook = antall_menn_facebook + 1
+            elif (medlem_facebook == 'Ja' or medlem_facebook == 'ja') and kjonn == 'k':
+                antall_kvinner_facebook = antall_kvinner_facebook + 1
+
+            antall_facebook = antall_menn_facebook + antall_kvinner_facebook
+
+
+            timer_sosmedier = timerSosMedierPrompt()
+
+            if timer_sosmedier == 'hade':
                 break
             else:
-                medlem_facebook = facebookVar
-
-            timerSosMedierVar = timerSosMedierPrompt()
-
-            if timerSosMedierVar == 'hade':
-                break
-            else:
-                timer_sosmedier = timerSosMedierVar
+                antall_timer_sosmedier = antall_timer_sosmedier + timer_sosmedier
         else:
             continue
 
-    print('test')
-
-
-
-
-
-
-
-
+    print('Antall menn:', antall_menn)
+    print('Antall kvinner:', antall_kvinner)
+    print('Antall aktive på sosiale medier:', antall_sosmedier)
+    print('Antall menn på facebook:', antall_menn_facebook)
+    print('Antall kvinner på facebook:', antall_kvinner_facebook)
+    print('Antall på facebook totalt:', antall_facebook)
+    print('Totalt antall timer på sosiale medier:', antall_timer_sosmedier)
 
 
 def main():
-    antall_kvinner = 0
-    antall_menn = 0
-    antall_sosmedier = 0
-    antall_facebook = 0
-    antall_timer_sosmedier = 0
     lokke()
 
 main()
