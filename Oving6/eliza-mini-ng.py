@@ -71,30 +71,29 @@ def main():
     # ved hjelp av funksjonen pick_sentence
     # Skriv spørsmålet etterfulgt av navnet til brukeren
     # og et spørsmålstegn ved hjelp av funksjonen print_sentence
-    # MANGLER KODE HER!!!
         print_sentence(pick_sentence(questions), navn, '?')
 
     # Spør brukeren om et svar med teksten "Svar: " og lagre
     # resultatet i en variabel
         answer = input('Svar: ')
+
     # Plukk ut et tilfeldig oppfølgingsspørsmål fra lista follow_ups
     # ved hjelp av funksjonen pick_sentence
     # MANGLER KODE HER!!!
-
     # Skriv oppfølgningsspørsmålet sammen med svaret fra brukeren
     # og et spørsmålstegn ved hjelp av funksjonen print_sentence
     # MANGLER KODE HER!!!
-
+        print(pick_sentence(follow_ups), answer, '?')
     # Spør brukeren om et svar med teksten "Svar: " uten å lagre
     # resultatet til variabel
     # MANGLER KODE HER!!!
-
+        answer = input('Svar: ')
     # Plukk ut en tilfeldig respons fra lista responses
     # ved hjelp av funksjonen pick_sentence
     # MANGLER KODE HER!!!
-
     # Skriv reponsen sammen med navnet til brukeren
     # og et punktum (".") ved hjelp av funksjonen print_sentence
     # MANGLER KODE HER!!!
+        print(pick_sentence(responses), navn, '.')
 
 main()
