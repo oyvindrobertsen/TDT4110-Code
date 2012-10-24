@@ -24,9 +24,9 @@ def multiplication_table(n):
 
 def main():
     print(is_prime(int(input('Skriv inn et heltall: '))), '\n')
-    print('================================================')
+    print('================================================\n')
     print(separate(list(range(200)), 50), '\n')
-    print('================================================')
+    print('================================================\n')
     print(multiplication_table(3))
 
 main()
