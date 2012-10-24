@@ -46,7 +46,7 @@ def stringception(string1, string2):
 
 def main():
     print(equal_strings("test", "test"))
-    print(reverse_string("humonculus"))
+    print(reverse_string("homunculus"))
     print(palindrome("abba"))
     print(stringception("pappa", "ap"))
 
